@@ -1,0 +1,13 @@
+/*note: file modified to remove colors, backgrounds, borders for jQuery UI theming */
+body { font-size:62.5%; margin:20px; }
+#files { margin:2em 0 5em; width:400px; }
+.tree { font-size:1.5em; }
+.tree,.tree ul,.tree li { list-style:none; margin:0; padding:0; zoom: 1; }
+.tree ul { margin-left:8px; }
+.tree li a { color:#555; padding:.1em 7px .1em 27px; display:block; text-decoration:none; border:1px dashed #fff; }
+.tree ul.tree-group-collapsed { display:none; }
+
+/*theme additions*/
+#files { border: none; padding: 0; background: none; }
+.tree li a { position: relative; padding:.4em 7px .4em 20px; border:1px dashed transparent;  }
+.ui-icon { position: absolute; left: 4px; top: 50%; margin-top: -8px; }
