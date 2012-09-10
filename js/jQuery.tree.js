@@ -50,7 +50,7 @@ $.fn.tree = function(settings){
 			.bind('expand',function(event){
 				var target = $(event.target) || tree.find('a[tabindex=0]');
 				target.removeClass('tree-parent-collapsed');
-				target.next().hide().removeClass('tree-group-collapsed').slideDown(150, function(){
+				target.nextAll('ul').hide().removeClass('tree-group-collapsed').slideDown(150, function(){
 					$(this).removeAttr('style');
 					target.parent().attr('aria-expanded', 'true');
 				});
@@ -59,7 +59,7 @@ $.fn.tree = function(settings){
 			.bind('collapse',function(event){
 				var target = $(event.target) || tree.find('a[tabindex=0]');
 				target.addClass('tree-parent-collapsed');
-				target.next().slideUp(150, function(){
+				target.nextAll('ul').slideUp(150, function(){
 					target.parent().attr('aria-expanded', 'false');
 					$(this).addClass('tree-group-collapsed').removeAttr('style');
 				});
@@ -82,7 +82,7 @@ $.fn.tree = function(settings){
 				var target = $(event.target) || tree.find('a[tabindex=0]');
 				var targetLi = target.parent();
 				if(targetLi.is('[aria-expanded=true]')){
-					target.next().find('a').eq(0).focus();
+					target.nextAll('ul').find('a').eq(0).focus();
 				}
 				else if(targetLi.next().length) {
 					targetLi.next().find('a').eq(0).focus();
