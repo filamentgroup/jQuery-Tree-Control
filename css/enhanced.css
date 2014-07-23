@@ -1,4 +1,4 @@
-body { font-size:62.5%; margin:20px; }
+body { font-size:62.5% }
 #files { margin:2em 0 5em; width:400px; }
 .tree { font-size:1.5em; }
 .tree,.tree ul,.tree li { list-style:none; margin:0; padding:0; zoom: 1; }
